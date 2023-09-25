@@ -78,3 +78,53 @@ const generateREADME = ({
   
   `;
 };
+//the 'inquirer' library prompts the user with a series of questions related to a project or application.
+//The responses to these prompts are used to auto-generate the README file
+inquirer.prompt([
+  {
+    type: "input",
+    name: "title",
+    message: "What is your title?",
+  },
+  {
+    type: "input",
+    name: "description",
+    message: "What is a brief description?",
+  },
+  {
+    type: "input",
+    name: "installation",
+    message: "what are the step-by-step installation instructions?.",
+  },
+  {
+    type: "input",
+    name: "usage",
+    message: "How do I use this application?",
+  },
+  {
+    type: "input",
+    name: "license",
+    message:
+      "What is your license information? ex: \nMIT License\nGNU General Public License (GPL)\nGNU Lesser GPL\nApache License 2.0\nBSD License\nISC\nMozilla Public License\nUnlicense",
+  },
+  {
+    type: "input",
+    name: "contributing",
+    message: "Who can contributed and how do they contribute?",
+  },
+  {
+    type: "input",
+    name: "tests",
+    message: "How do I run tests?",
+  },
+  {
+    type: "input",
+    name: "github",
+    message: "What is your GitHub username?",
+  },
+  {
+    type: "input",
+    name: "email",
+    message: "What is your email address?",
+  },
+]);
